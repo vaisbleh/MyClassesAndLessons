@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Teacher eJournal</string>
+    <string name="groups">groups</string>
+    <string name="lessons">lessons</string>
+    <string name="students">students</string>
+    <string name="new_group">new group</string>
+    <string name="delete">delete</string>
+    <string name="enter_group_name">enter group name</string>
+    <string name="save">save</string>
+    <string name="enter_site">enter site</string>
+    <string name="delete_group">Delete group?</string>
+    <string name="delete_student">Delete student?</string>
+    <string name="delete_lesson">Delete lesson?</string>
+    <string name="dialog_message">Are you sure?</string>
+    <string name="positive_btn">Yes</string>
+    <string name="negative_btn">No</string>
+    <string name="new_student">new student</string>
+    <string name="enter_student_name">enter student name</string>
+    <string name="show_photo">show photo</string>
+    <string name="enter_photo_address">enter photo address</string>
+    <string name="new_lesson">new lesson</string>
+    <string name="enter_lesson_name">enter lesson name</string>
+    <string name="choose_group">choose group</string>
+    <string name="presence">Presence</string>
+    <string name="download">download</string>
+    <string name="share">share</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vaisbleh.user.my_classes_and_lessons.activities.NewLessonActivity">
+
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editLessonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="@string/enter_lesson_name"
+        android:inputType="textPersonName"
+        android:padding="5dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editLessonName"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="@string/choose_group" />
+
+    <Spinner
+        android:id="@+id/groupsNewLessonSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editLessonName"
+        android:layout_below="@+id/textView2"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:id="@+id/saveNewLessonBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/groupsNewLessonSpinner"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="50dp"
+        android:text="@string/save"
+        android:textSize="18sp" />
+</RelativeLayout>
