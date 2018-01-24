@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.groupsBtn).setOnClickListener(this);
         findViewById(R.id.lessonsBtn).setOnClickListener(this);
         findViewById(R.id.studentBtn).setOnClickListener(this);
+        findViewById(R.id.adminBtn).setOnClickListener(this);
+
 
         helper = new ClassesLessonsDBHelper(this);
         sp = PreferenceManager.getDefaultSharedPreferences(this);
@@ -53,6 +55,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.studentBtn:
                 startActivity(new Intent(this, StudentsActivity.class));
                 break;
+
+            case R.id.adminBtn:
+                startActivity(new Intent(this, AdminActivity.class));
+                break;
+
+
 
         }
     }

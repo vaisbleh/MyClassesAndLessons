@@ -24,4 +24,10 @@
     <string name="presence">Presence</string>
     <string name="download">download</string>
     <string name="share">share</string>
+    <string name="administrator">administrator</string>
+    <string name="share_groups">share groups</string>
+    <string name="share_students">share students</string>
+    <string name="share_lessons">share lessons</string>
+    <string name="share_presences">share presences</string>
+    <string name="upload_students">upload students</string>
 </resources>

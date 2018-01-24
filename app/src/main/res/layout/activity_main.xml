@@ -39,4 +39,13 @@
             android:layout_weight="1"
             android:text="@string/students" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/adminBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dp"
+        android:text="@string/administrator" />
 </RelativeLayout>
