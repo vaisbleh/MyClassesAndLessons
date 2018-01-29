@@ -16,4 +16,52 @@ public class PresenceToShare {
         this.lessonTime = lessonTime;
         this.isPresence = isPresence;
     }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public String getGroupSite() {
+        return groupSite;
+    }
+
+    public void setGroupSite(String groupSite) {
+        this.groupSite = groupSite;
+    }
+
+    public String getLessonName() {
+        return lessonName;
+    }
+
+    public void setLessonName(String lessonName) {
+        this.lessonName = lessonName;
+    }
+
+    public String getLessonTime() {
+        return lessonTime;
+    }
+
+    public void setLessonTime(String lessonTime) {
+        this.lessonTime = lessonTime;
+    }
+
+    public boolean isPresence() {
+        return isPresence;
+    }
+
+    public void setPresence(boolean presence) {
+        isPresence = presence;
+    }
 }

@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.vaisbleh.user.my_classes_and_lessons.activities.MainActivity;
 import com.vaisbleh.user.my_classes_and_lessons.model.Group;
@@ -77,6 +78,17 @@ public class ClassesLessonsDBHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    public void deleteStudentPresenceByStudent(int studentID) {
+        ArrayList<StudentPresence>studentPresences = getStudentPresencesById(studentID);
+        Log.e("list size", studentPresences.size() + "");
+
+        for (int i = 0; i <studentPresences.size() ; i++) {
+            deleteStudentPresence(studentPresences.get(i).getStudentPresenceID());
+        }
+    }
+
+
+
     public void deletePresenceByLesson(Lesson lesson){
 
         ArrayList<StudentPresence>studentPresences = getStudentPresences(lesson);
@@ -107,6 +119,26 @@ public class ClassesLessonsDBHelper extends SQLiteOpenHelper {
             int studentPresenceID = cursor.getInt(cursor.getColumnIndex(COL_STUDENT_PRESENCE_ID));
             int studentId = cursor.getInt(cursor.getColumnIndex(COL_STUDENT_ID));
             Student student = getStudent(studentId);
+            int presence = cursor.getInt(cursor.getColumnIndex(COL_STUDENT_PRESENCE_ISPRESENCE));
+            boolean isPresence = false;
+            if(presence == 1){
+                isPresence = true;
+            }
+            studentPresences.add(new StudentPresence(studentPresenceID, student, lesson, isPresence));
+        }
+        db.close();
+        return studentPresences;
+    }
+
+    public ArrayList<StudentPresence> getStudentPresencesById(int studentId) {
+        ArrayList<StudentPresence> studentPresences = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor cursor = db.query(STUDENT_PRESENCE_TABLE_NAME, null, COL_STUDENT_ID + "=" + studentId, null, null, null, null);
+        while (cursor.moveToNext()) {
+            int studentPresenceID = cursor.getInt(cursor.getColumnIndex(COL_STUDENT_PRESENCE_ID));
+            Student student = getStudent(studentId);
+            long lessonTime = cursor.getLong(cursor.getColumnIndex(COL_LESSON_TIME));
+            Lesson lesson = getLesson(lessonTime);
             int presence = cursor.getInt(cursor.getColumnIndex(COL_STUDENT_PRESENCE_ISPRESENCE));
             boolean isPresence = false;
             if(presence == 1){

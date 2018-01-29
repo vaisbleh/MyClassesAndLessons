@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vaisbleh.user.my_classes_and_lessons">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
 
     <application
         android:allowBackup="true"
@@ -43,6 +46,20 @@
             android:configChanges="orientation|screenSize" />
         <activity android:name=".activities.AdminActivity"
             android:configChanges="orientation|screenSize" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.vaisbleh.user.my_classes_and_lessons.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+
+        </provider>
+
     </application>
+
+
 
 </manifest>

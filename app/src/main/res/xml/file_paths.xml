@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="my_lessons" path="Android/data/com.vaisbleh.user.my_classes_and_lessons/files/Lessons" />
+</paths>

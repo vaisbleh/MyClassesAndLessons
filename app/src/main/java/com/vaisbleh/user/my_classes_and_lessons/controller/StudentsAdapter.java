@@ -138,6 +138,8 @@ public class StudentsAdapter extends RecyclerView.Adapter <StudentsAdapter.Stude
 
             switch (button){
                 case DialogInterface.BUTTON_POSITIVE:
+
+                    helper.deleteStudentPresenceByStudent(currentStudent.getStudentId());
                     helper.deleteStudent(currentStudent.getStudentId());
                     position = getAdapterPosition();
                     remove(currentStudent);
