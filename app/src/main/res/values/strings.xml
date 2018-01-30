@@ -23,7 +23,7 @@
     <string name="choose_group">choose group</string>
     <string name="presence">Presence</string>
     <string name="download">download</string>
-    <string name="share">share</string>
+    <string name="share">download</string>
     <string name="administrator">administrator</string>
     <string name="share_groups">share groups</string>
     <string name="share_students">share students</string>
